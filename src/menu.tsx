@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css';
+import '../style.css';
 import CustomerThank from './customerthanks';
 import RegisterUser from './registerUser';
 import App from './App';

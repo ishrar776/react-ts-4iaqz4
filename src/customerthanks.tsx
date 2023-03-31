@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css';
+import '../style.css';
 import { useNavigate, Link } from 'react-router-dom';
 import styled from 'styled-components';
 export default function CustomerThank() {

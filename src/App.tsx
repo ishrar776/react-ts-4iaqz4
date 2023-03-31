@@ -2,8 +2,6 @@ import * as React from 'react';
 import '../style.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-//import './style.css';
-//import MenuBar from './menu';
 export default function App() {
   let navigate = useNavigate();
   const [file, setFile] = useState('');
