@@ -99,7 +99,7 @@ export default function App() {
     }
   };
   return (
-    <>
+    <div>
       <form onSubmit={submitdata}>
         <h1>Hello StackBlitz!</h1>
         <p>
@@ -168,6 +168,6 @@ export default function App() {
           <input type="submit" />
         </p>
       </form>
-    </>
+    </div>
   );
 }
