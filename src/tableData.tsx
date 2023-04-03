@@ -21,6 +21,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import { useNavigate } from 'react-router-dom';
+import { createContext } from 'react';
 
 interface Data {
   calories: number;
@@ -271,7 +272,8 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
     </Toolbar>
   );
 }
-
+//export const ProsData = createContext('israr');
+export var ProsData;
 export default function EnhancedTable() {
   const [order, setOrder] = React.useState<Order>(DEFAULT_ORDER);
   const [orderBy, setOrderBy] = React.useState<keyof Data>(DEFAULT_ORDER_BY);
@@ -328,8 +330,11 @@ export default function EnhancedTable() {
     const selectedIndex = selected.indexOf(name);
     let newSelected: readonly string[] = [];
     console.log('table data bind' + name);
+    ProsData = createContext(name);
+    //createContext(name);
     //pros.name4(name);
-    localStorage.setItem('Dpass', [name]);
+    //localStorage.setItem('Dpass', [name]);
+    //localStorage.setItem('Dpass', name);
     navigate('/productDetails');
     if (selectedIndex === -1) {
       newSelected = newSelected.concat(selected, name);
