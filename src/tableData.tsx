@@ -273,7 +273,7 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
   );
 }
 //export const ProsData = createContext('israr');
-export var ProsData;
+//export var ProsData;
 export default function EnhancedTable() {
   const [order, setOrder] = React.useState<Order>(DEFAULT_ORDER);
   const [orderBy, setOrderBy] = React.useState<keyof Data>(DEFAULT_ORDER_BY);
@@ -330,7 +330,7 @@ export default function EnhancedTable() {
     const selectedIndex = selected.indexOf(name);
     let newSelected: readonly string[] = [];
     console.log('table data bind' + name);
-    ProsData = createContext(name);
+    var ProsData = createContext(name);
     //createContext(name);
     //pros.name4(name);
     //localStorage.setItem('Dpass', [name]);
