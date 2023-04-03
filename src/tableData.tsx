@@ -20,6 +20,7 @@ import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
+import { useNavigate } from 'react-router-dom';
 
 interface Data {
   calories: number;
@@ -280,7 +281,7 @@ export default function EnhancedTable() {
   const [visibleRows, setVisibleRows] = React.useState<Data[] | null>(null);
   const [rowsPerPage, setRowsPerPage] = React.useState(DEFAULT_ROWS_PER_PAGE);
   const [paddingHeight, setPaddingHeight] = React.useState(0);
-
+  let navigate = useNavigate();
   React.useEffect(() => {
     let rowsOnMount = stableSort(
       rows,
@@ -326,7 +327,10 @@ export default function EnhancedTable() {
   const handleClick = (event: React.MouseEvent<unknown>, name: string) => {
     const selectedIndex = selected.indexOf(name);
     let newSelected: readonly string[] = [];
-
+    console.log('table data bind' + name);
+    //pros.name4(name);
+    localStorage.setItem('Dpass', [name]);
+    navigate('/productDetails');
     if (selectedIndex === -1) {
       newSelected = newSelected.concat(selected, name);
     } else if (selectedIndex === 0) {
