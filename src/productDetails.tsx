@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { useContext } from 'react';
-import { ProsData } from './tableData';
+//import { ProsData } from './tableData';
 import '../style.css';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
