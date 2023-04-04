@@ -330,11 +330,11 @@ export default function EnhancedTable() {
     const selectedIndex = selected.indexOf(name);
     let newSelected: readonly string[] = [];
     console.log('table data bind' + name);
-    var ProsData = createContext(name);
+    //var ProsData = createContext(name);
     //createContext(name);
     //pros.name4(name);
     //localStorage.setItem('Dpass', [name]);
-    //localStorage.setItem('Dpass', name);
+    localStorage.setItem('Dpass', name);
     navigate('/productDetails');
     if (selectedIndex === -1) {
       newSelected = newSelected.concat(selected, name);
@@ -348,7 +348,6 @@ export default function EnhancedTable() {
         selected.slice(selectedIndex + 1)
       );
     }
-
     setSelected(newSelected);
   };
 

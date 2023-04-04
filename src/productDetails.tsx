@@ -10,7 +10,7 @@ export default function ProductDetails() {
   const itemcart = localStorage.getItem('Dpass');
   const arraytem = itemcart.split(',');
   const prosvalue = arraytem[0];
-  const fname = useContext(ProsData);
+  //const fname = useContext(ProsData);
   return (
     <>
       <div>Details List of all RegisterUser</div>
@@ -19,9 +19,7 @@ export default function ProductDetails() {
           Back To Register Deatils Page{' '}
         </Button>
       </p>
-      <p>
-        ProductDetails each product {prosvalue} {fname}
-      </p>
+      <p>ProductDetails each product {prosvalue}</p>
     </>
   );
 }
