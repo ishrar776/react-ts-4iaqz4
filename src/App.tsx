@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 export default function App() {
   let navigate = useNavigate();
-  const [file, setFile] = useState('');
+  const [file, setFile] = useState(''); 
   const [chkBox, setChkBox] = useState(false);
   const [value, setValue] = useState('fruit');
   const [radioValue, setradioValue] = useState('Male');
